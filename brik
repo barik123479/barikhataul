@@ -1,0 +1,27 @@
+@Composable
+fun MyList(items: List<String>) {
+LazyColumn {
+items(items) { item ->
+Text(text = item)
+}
+}
+}
+
+@Composable
+fun Greeting (name: String) {
+Text(text = "Hello, $name!")
+}
+
+@Composable
+fun MyTheme (content: @Composable () Unit) {
+Material Theme (
+colors = lightColors(
+primary = Purple200,
+primaryVariant = Purple700,
+secondary = Teal200
+),
+typography = Typography,
+shapes = Shapes,
+content = content
+)
+}
